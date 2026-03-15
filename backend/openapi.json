@@ -1,0 +1,47 @@
+{
+  "components": {
+    "schemas": {
+      "HelloResponse": {
+        "properties": {
+          "message": {
+            "title": "Message",
+            "type": "string"
+          }
+        },
+        "required": [
+          "message"
+        ],
+        "title": "HelloResponse",
+        "type": "object"
+      }
+    }
+  },
+  "info": {
+    "title": "Fullstack Template API",
+    "version": "0.1.0"
+  },
+  "openapi": "3.1.0",
+  "paths": {
+    "/api/hello": {
+      "get": {
+        "operationId": "getHello",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HelloResponse"
+                }
+              }
+            },
+            "description": "Successful Response"
+          }
+        },
+        "summary": "Hello",
+        "tags": [
+          "hello"
+        ]
+      }
+    }
+  }
+}
